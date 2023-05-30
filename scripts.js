@@ -11,7 +11,7 @@ document.getElementById('btnStart').addEventListener('click', ()=>{
     if (start == null || !btnStart.classList.contains('btnstop')) {
         start = setInterval(MS, 10)
         btnStart.classList.add('btnstop')
-        btnStart.innerHTML = `STOP`
+        btnStart.innerHTML = `PAUSE`
     } else {
         clearInterval(start)
         btnStart.classList.remove('btnstop')
@@ -21,6 +21,10 @@ document.getElementById('btnStart').addEventListener('click', ()=>{
 document.getElementById('btnReset').addEventListener('click', ()=>{
     clearInterval(start)
     time.innerHTML = `00 : 00 : 00 : 000`
+    i = 0
+    j = 0
+    k = 0
+    l = 0
     if (btnStart.classList.contains('btnstop')) {
         btnStart.classList.remove('btnstop')
         btnStart.innerHTML = `START`
